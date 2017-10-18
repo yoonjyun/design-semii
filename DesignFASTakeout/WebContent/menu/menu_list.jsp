@@ -8,35 +8,24 @@
       .menu {
 	    width: 200px;
         height: 200px;
-        /* float: left; */
         margin: 20px;
         text-align: center;
       	display: inline-block;
-        /* width: 200px;
-        height: 200px;
-        float: left;
-        margin: 20px;
-        text-align: center; */
       }
       .menuList{
       	width: 100%;
       	text-align: center;
       	padding-top: 90px;
       }
-      /* .storeListIn{
-    	width: 200px;
-        height: 200px;
-        float: left;
-        margin: 20px;
-        text-align: center;
-      	display: inline-block;
-      } */
+      .storeInfo{
+      	padding-top: 90px;
+      }
 </style>
 	<%-- 가맹점 정보  --%>
   
 <div class="col-md-1"></div>
 <div class="col-md-10 menuList">
-	<div class="row">
+	<div class="row storeInfo">
   	<table class="table table-bordered">
   		<tr>
   			<td colspan="4"><h2>가맹점 정보</h2></td>
