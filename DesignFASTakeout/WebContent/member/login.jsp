@@ -21,11 +21,12 @@
 		    <input type="password" class="form-control" name="userPwd" placeholder="암호를 입력하세요">
 		  </div>
 		  <div class="row center">
-		  <button type="submit" class="btn btn-default">로그인</button>
+		<p align="center">
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		  <button type="submit" class="btn btn-default">로그인</button>&nbsp;
+		  <a class="btn btn-default" href="${pageContext.request.contextPath}/DispatcherServlet?command=registerIndex" role="button">회원가입</a>
+		</p>
 		  </div>
 		</form>
 		<br><br><br><br>
-		<p align="center">
-			<a href="${pageContext.request.contextPath}/DispatcherServlet?command=registerIndex">회원가입</a>
-		</p>
 	</div>
