@@ -18,7 +18,10 @@
       	padding-top: 90px;
       }
       .storeInfo{
-      	padding-top: 90px;
+      	padding-top: 10px;
+      }
+      .storeInfoTable{
+      	text-align: center;
       }
 </style>
 	<%-- 가맹점 정보  --%>
@@ -26,7 +29,7 @@
 <div class="col-md-1"></div>
 <div class="col-md-10 menuList">
 	<div class="row storeInfo">
-  	<table class="table table-bordered">
+  	<table class="table table-bordered storeInfoTable">
   		<tr>
   			<td colspan="4"><h2>가맹점 정보</h2></td>
   		</tr>
