@@ -6,17 +6,36 @@
 
 <style>
       .menu {
-        width: 200px;
+	    width: 200px;
+        height: 200px;
+        /* float: left; */
+        margin: 20px;
+        text-align: center;
+      	display: inline-block;
+        /* width: 200px;
         height: 200px;
         float: left;
-        margin: 10px;
-        text-align: center;
+        margin: 20px;
+        text-align: center; */
       }
+      .menuList{
+      	width: 100%;
+      	text-align: center;
+      	padding-top: 90px;
+      }
+      /* .storeListIn{
+    	width: 200px;
+        height: 200px;
+        float: left;
+        margin: 20px;
+        text-align: center;
+      	display: inline-block;
+      } */
 </style>
 	<%-- 가맹점 정보  --%>
   
 <div class="col-md-1"></div>
-<div class="col-md-10">
+<div class="col-md-10 menuList">
 	<div class="row">
   	<table class="table table-bordered">
   		<tr>
