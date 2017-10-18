@@ -16,19 +16,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/css.css">
-<%-- 	<script src="${pageContext.request.contextPath }/css/css.css" type="text/css"></script> --%>
-	<!-- <style type="text/css">
-		.header{
-			min-height: 100px;
-			background-color: white;
-		}
-		.main{
-			min-height: 70%;
-		}
-		.center{
-			border-left: 1px solid Gainsboro;
-		}
-	</style> -->
+	
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#command").change(function() {
@@ -61,19 +49,21 @@
 			  	 </a>		  
 			 </p>
 		</div>
-		 <div class="mainlink">
-		 	 <div class="col-md-3">
+		<div class="col-md-3">
+		<div class="mainlink">
 		  	<p align="left">
 		  		<a href="${pageContext.request.contextPath}/DispatcherServlet?command=intro">서비스소개</a> 
 		  	  	&nbsp;
 		  		<a href="template/home.jsp">메뉴보기</a>		 	
 		  	  	&nbsp;
+		  	  	<%-- session 검사 --%>
 			<c:if test="${sessionScope.mvo != null }"> <%-- session 검사 --%>
 		  		<c:choose>
 		  			<c:when test="${sessionScope.mvo.auth=='customer' }">
 						<select id="command" class="btn btn-default">
 					        <option value="">${mvo.name}님</option>
 					        <option value="${sessionScope.mvo.auth}">주문내역보기</option>
+					        <option value="">장바구니</option>
 					        <option value="viewMypage">마이페이지</option>
 					        <option value="chargeForm">결제카드 충전</option>
 					        <option value="logout">로그아웃</option>
@@ -94,9 +84,9 @@
 		   	    </p>
 		   	  </div>   
 			</div>
-			</div>
+	</div>
 
-	</section>
+</section>
 
 
  	<!-- MAIN -->
