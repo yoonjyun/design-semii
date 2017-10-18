@@ -6,11 +6,19 @@
 
 <style>
       .store {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
         float: left;
-        margin: 5px;
-        text-align: center;
+        margin: 20px;
+        text-align: left;
+      }
+      .storeList{
+      	width: 100%;
+      	text-align; center;
+      	padding-top: 90px;
+      }
+      .storeListIn{
+      	display: inline-block;
       }
 </style>
 
@@ -19,7 +27,7 @@
 <div class="col-md-10">
 <c:set value="${requestScope.lvo}" var="lvo"/>
 <c:set value="${lvo.pagingBean}" var="pb"/>
-	<div class="row">
+	<div class="row storeList">
 	  <c:forEach items="${lvo.list}" var="store">
 	  	<div class="store">
 				 <a href="${pageContext.request.contextPath}/DispatcherServlet?command=getMenuList&storeNo=${store.storeNo}&nowPage=1">
