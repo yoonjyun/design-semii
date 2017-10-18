@@ -40,8 +40,8 @@
     <!-- HEADER -->
    <section class="header">
     <div class="row">
-		 <div class="col-md-3"></div>
-		 <div class="col-md-6 center">
+		 <div class="col-md-4"></div>
+		 <div class="col-md-4 center">
 		  	<p align="center">
 			  <br>
 			  	 <a href="${pageContext.request.contextPath}/welcome.jsp">
@@ -49,9 +49,9 @@
 			  	 </a>		  
 			 </p>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-4">
 		<div class="mainlink">
-		  	<p align="left">
+		  	<p align="center">
 		  		<a href="${pageContext.request.contextPath}/DispatcherServlet?command=intro">서비스소개</a> 
 		  	  	&nbsp;
 		  		<a href="template/home.jsp">메뉴보기</a>		 	
