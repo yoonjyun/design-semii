@@ -5,29 +5,26 @@
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 <style>
-      .store {
-        width: 200px;
-        height: 200px;
-        float: left;
+       .store {
+	    width: 300px;
+        height: 300px;
         margin: 20px;
-        text-align: left;
+        text-align: center;
+      	display: inline-block;
       }
       .storeList{
       	width: 100%;
-      	text-align; center;
+      	text-align: center;
       	padding-top: 90px;
-      }
-      .storeListIn{
-      	display: inline-block;
       }
 </style>
 
 
 <div class="col-md-1"></div>
-<div class="col-md-10">
+<div class="col-md-10 storeList">
 <c:set value="${requestScope.lvo}" var="lvo"/>
 <c:set value="${lvo.pagingBean}" var="pb"/>
-	<div class="row storeList">
+	<div class="row">
 	  <c:forEach items="${lvo.list}" var="store">
 	  	<div class="store">
 				 <a href="${pageContext.request.contextPath}/DispatcherServlet?command=getMenuList&storeNo=${store.storeNo}&nowPage=1">
