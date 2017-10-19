@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <html lang="en">
 <head>
@@ -8,7 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+	<meta name="viewport" content="width=device-width, initial-scale=0.75">
+	
+	
     <title>FASTakeout :: 판교지역 선주문 서비스 </title>
 
     <!--  부트스트랩 CDN + 제이쿼리 CDN -->
