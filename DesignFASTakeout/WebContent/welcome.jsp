@@ -16,12 +16,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- 	<style type="text/css">
+		.header{
+			min-height: 100px;
+		}
+	</style> -->
 </head>
-
 <body>
 <!-- MAIN -->
-	
-
+	<section class="header"></section>
+<section class="main">
 			  <div class="col-md-2"></div>
 			  <div class="col-md-8 center">
 						  <c:choose>
@@ -34,7 +38,7 @@
 						  </c:choose>
 			  </div>
 			  <div class="col-md-2"></div>
-
+</section>
     
 
 

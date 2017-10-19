@@ -1,12 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/css.css">
 <br><br><br>
-<style type="text/css">
-  	td{
-  		padding:5px;
-  		text-align: justify;
-  	}
+<style>
+	table{
+		text-align: center;
+	}
+	td,th{
+		padding: 15px;  /*내부여백*/
+		font-size: 15px;
+		vertical-align: center;
+
+/* 		font-weight: bold; */
+	}
 </style>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -56,16 +63,16 @@ $(document).ready(function(){
 		  <div class="col-md-8">
 			  <form action="${pageContext.request.contextPath}/DispatcherServlet?command=registerMember" method="post" id="regForm">
 					<input type="hidden" name="userId" id="userId" value="">
-					<table>
-						<tr><td>가입구분 :</td><td colspan="2"><input type="text" value="${param.auth}" name="auth" readonly="readonly"></td></tr>
-						<tr><td>아이디 :</td><td><input type="text" id="input_id"></td><td><input type="button" id="idCheckBtn" value="중복확인"></td></tr>
-						<tr><td>비밀번호 :</td><td colspan="2"><input type="password"  name="userPwd" id="userPwd1"></td></tr>
-						<tr><td>비밀번호 확인 :</td><td colspan="2"><input type="password" id="userPwd2"></td></tr>
-						<tr><td>이름 :</td><td colspan="2"><input type="text"  name="userName"></td></tr>
-						<tr><td>휴대폰번호 :</td><td colspan="2"><input type="text"  name="userPhone"></td></tr>
-						<tr><td>결제비밀번호 :</td><td colspan="2"><input type="password" name="userPayPwd" id="payPwd1"></td></tr>
-						<tr><td>결제비밀번호 확인 :</td><td colspan="2"><input type="password" id="payPwd2"></td></tr>
-						<tr><td colspan="3"><input type="submit" value="회원가입"></td></tr>
+					<table class="table">
+						<tr><th>가입구분 </th><td colspan="2"><input type="text" value="${param.auth}" name="auth" readonly="readonly"></td><td></td></tr>
+						<tr><th>아이디 </th><td colspan="2"><input type="text" id="input_id"></td><td><input class="btn btn-default" type="button" id="idCheckBtn" value="중복확인"></td></tr>
+						<tr><th>비밀번호 </th><td colspan="2"><input type="password"  name="userPwd" id="userPwd1"></td><td></td></tr>
+						<tr><th>비밀번호 확인 </th><td colspan="2"><input type="password" id="userPwd2"></td><td></td></tr>
+						<tr><th>이름 </th><td colspan="2"><input type="text"  name="userName"></td><td></td></tr>
+						<tr><th>휴대폰번호 </th><td colspan="2"><input type="text"  name="userPhone"></td><td></td></tr>
+						<tr><th>결제비밀번호 </th><td colspan="2"><input type="password" name="userPayPwd" id="payPwd1"></td><td></td></tr>
+						<tr><th>결제비밀번호 확인 </th><td colspan="2"><input type="password" id="payPwd2"></td><td></td></tr>
+						<tr><td colspan="4"><input class="btn btn-default" type="submit" value="회원가입"></td></tr>
 					</table>
 			   </form>
 		  </div>

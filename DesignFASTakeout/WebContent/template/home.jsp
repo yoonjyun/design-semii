@@ -40,7 +40,7 @@
 	</script>
 	<style type="text/css">
 		.header{
-			min-height: 130px;
+			min-height: 180px;
 			background-image: url("${pageContext.request.contextPath}/upload/6.png");
 		}
 	</style>
@@ -50,7 +50,12 @@
     <!-- HEADER -->
 	<section class="header">
 		<div class="row">
-			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<p align="right"><br><br><br><br><br><br><br>
+			  		<a href="${pageContext.request.contextPath}/DispatcherServlet?command=intro" style="color: white; font-weight: bold">서비스소개</a> &nbsp;&nbsp;
+			  		<a href="template/home.jsp" style="color: white; font-weight: bold; font-size: 15px">메뉴보기</a>	&nbsp;&nbsp;
+				</p>
+			</div>
 			<div class="col-md-4 center">
 			  	<br><br>
 			  	<%-- <p style="font-size:50px; text-shadow: 0 0 1px #006600 , 0 0 10px #ff0000 ; ">
@@ -64,19 +69,8 @@
 				  	 </a>		  
 				 </p>
 			</div>
-			<div class="col-md-4"></div>
-		</div>
-		<div class="row">
 			<div class="col-md-4">
-				<p align="right"><br>
-			  		<a href="${pageContext.request.contextPath}/DispatcherServlet?command=intro" style="color: white; font-weight: bold">서비스소개</a> &nbsp;
-			  		<a href="template/home.jsp" style="color: white; font-weight: bold">메뉴보기</a>	&nbsp;
-				</p>
-			</div>
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
-							<div class="col-md-4">
-				<div class="mainlink"><br>
+				<div class="mainlink"><br><br><br>
 			  	  	<%-- session 검사 --%>
 					<c:if test="${sessionScope.mvo != null }"> <%-- session 검사 --%>
 			  			<c:choose>
@@ -104,11 +98,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
-		 	
-
+	<div class="row"></div>
 	</section>
-<br><br><br><br>
+<br><br>
 
  	<!-- MAIN -->
 	<section class="main">
