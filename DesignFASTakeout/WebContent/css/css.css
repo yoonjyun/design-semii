@@ -43,5 +43,43 @@
 		  		font-size: 20px;
 		  		text-align: justify;
 		 } */
+		 
+		 
+		 /* 가맹점 리스트  */
+      .storeList{
+      	text-align: center;
+      }
+		.store {
+        text-align: center;
+      }
+      .storeImg{
+      	max-width:75%; 
+ 		height: auto; 
+      }
+      /* 메뉴 리스트 */
+      .menu {
+	    width: 200px;
+        height: 200px;
+        margin: 20px;
+        text-align: center;
+      	display: inline-block;
+      }
+      .menuList{
+      	width: 100%;
+      	text-align: center;
+      	padding-top: 10px;
+      }
+      .menuListRow{
+      	padding-top: 30px;
+      }
+      .storeInfo{
+      	padding-top: 10px;
+      }
+      .storeInfoTable{
+      	text-align: center;
+      }
+		 
+		 
+		 
 
 		

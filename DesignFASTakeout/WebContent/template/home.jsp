@@ -105,11 +105,11 @@
  	<!-- MAIN -->
 	<section class="main">
 		<div class="row">
-		  	<div class="col-md-2"></div>
-		 	<div class="col-md-8 center">
+		  	<div class="col-md-1"></div>
+		 	<div class="col-md-10 center">
 		  	 	<jsp:include page="${requestScope.url}"></jsp:include>
 		  	</div>
-		  	<div class="col-md-2"></div>
+		  	<div class="col-md-1"></div>
 		</div>
     </section>
 
