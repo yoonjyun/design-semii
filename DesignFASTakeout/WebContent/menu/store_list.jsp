@@ -15,7 +15,6 @@
       .storeList{
       	width: 100%;
       	text-align: center;
-      	padding-top: 90px;
       }
 </style>
 

@@ -2,13 +2,24 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/css.css">
-	<%-- 메인이미지 --%>	<br><br><br><br>
-	<p align="center">
-	<br>
-			<a href="${pageContext.request.contextPath}/DispatcherServlet?command=getStoreList&nowPage=1">
-			<img alt="로고" src="${pageContext.request.contextPath}/upload/logooo.png" width="600px" align="middle">
-		</a>
-	</p>
+	<%-- 메인이미지 --%>
+<style>
+	body{
+		position: relative;
+		background-image: url("${pageContext.request.contextPath}/upload/main2.jpg");                                                               
+		height: 100vh;
+		background-size: cover;
+	}
+</style>
+<div class="img-cover">
+	<br><br><br><br><br><br>
+		<div class="logo">
+			<p align="center">
+				<a href="${pageContext.request.contextPath}/DispatcherServlet?command=getStoreList&nowPage=1">
+					<img alt="로고" src="${pageContext.request.contextPath}/upload/logo3.png" width="600px" align="middle">
+				</a>
+			</p>
+		</div>
 	 	<br><br><br><br>
 	 	<%-- 로그인폼 --%>
 	<div id="loginForm">
@@ -30,3 +41,4 @@
 		</form>
 		<br><br><br><br>
 	</div>
+</div>

@@ -4,7 +4,7 @@
 <script src="//code.jquery.com/jquery.min.js"></script> 
 <c:choose>
 	<c:when test="${sessionScope.mvo != null}">
-	<h3>현재 주문 내역</h3>
+	<p style="color: black;">현재 주문 내역</p>
 	<table class="table table-bordered">
 			<thead>
 				<tr>

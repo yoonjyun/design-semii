@@ -16,6 +16,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/css.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -29,78 +30,94 @@
 					location.href="${pageContext.request.contextPath}/DispatcherServlet?id=${sessionScope.mvo.memberId}&command="+command;
 				}else if(command=="managementStore"){
 					location.href="${pageContext.request.contextPath}/DispatcherServlet?nowPage=1&command="+command;				
+				}else if(command=="getCartList"){
+					location.href="${pageContext.request.contextPath}/DispatcherServlet?nowPage=1&command="+command;				
 				}else{
 					location.href="${pageContext.request.contextPath}/DispatcherServlet?command="+command;
 				}
 			})
 		});
 	</script>
-  </head>
-  <body>
+	<style type="text/css">
+		.header{
+			min-height: 130px;
+			background-image: url("${pageContext.request.contextPath}/upload/6.png");
+		}
+	</style>
+</head>
+  
+<body>
     <!-- HEADER -->
-   <section class="header">
-    <div class="row">
-		 <div class="col-md-4"></div>
-		 <div class="col-md-4 center">
-		  	<p align="center">
-			  <br>
-			  	 <a href="${pageContext.request.contextPath}/welcome.jsp">
-			  	 	<img alt="로고" src="${pageContext.request.contextPath}/upload/logooo.png" width="500px">
-			  	 </a>		  
-			 </p>
-		</div>
-		<div class="col-md-4">
-		<div class="mainlink">
-		  	<p align="center">
-		  		<a href="${pageContext.request.contextPath}/DispatcherServlet?command=intro">서비스소개</a> 
-		  	  	&nbsp;
-		  		<a href="template/home.jsp">메뉴보기</a>		 	
-		  	  	&nbsp;
-		  	  	<%-- session 검사 --%>
-			<c:if test="${sessionScope.mvo != null }"> <%-- session 검사 --%>
-		  		<c:choose>
-		  			<c:when test="${sessionScope.mvo.auth=='customer' }">
-						<select id="command" class="btn btn-default">
-					        <option value="">${mvo.name}님</option>
-					        <option value="${sessionScope.mvo.auth}">주문내역보기</option>
-					        <option value="">장바구니</option>
-					        <option value="viewMypage">마이페이지</option>
-					        <option value="chargeForm">결제카드 충전</option>
-					        <option value="logout">로그아웃</option>
-					   </select>
-					   &nbsp; <a href="#">장바구니</a> 
-		  			</c:when>
-		  			<c:otherwise>
-		  				<select id="command" class="btn btn-default">
-					        <option value="">${mvo.name}님</option>
-					        <option value="${sessionScope.mvo.auth}">주문현황보기</option>
-					        <option value="viewMypage">마이페이지</option>
-					        <option value="managementStore">업체관리</option>
-					        <option value="logout">로그아웃</option>
-					   </select>
-		  			</c:otherwise>
-		  		</c:choose>
-		   	     </c:if>
-		   	    </p>
-		   	  </div>   
+	<section class="header">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4 center">
+			  	<br><br>
+			  	<%-- <p style="font-size:50px; text-shadow: 0 0 1px #006600 , 0 0 10px #ff0000 ; ">
+					<a href = "${pageContext.request.contextPath }/frontController?command=allpostlist">
+					FASTakeOut
+					</a>
+				</p> --%>
+		  		<p align="center">
+				  	 <a href="${pageContext.request.contextPath}/DispatcherServlet?command=getStoreList&nowPage=1">
+				  	 	<img alt="로고" src="${pageContext.request.contextPath}/upload/logo3.png" width="600px">
+				  	 </a>		  
+				 </p>
 			</div>
+			<div class="col-md-4"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<p align="right"><br>
+			  		<a href="${pageContext.request.contextPath}/DispatcherServlet?command=intro" style="color: white; font-weight: bold">서비스소개</a> &nbsp;
+			  		<a href="template/home.jsp" style="color: white; font-weight: bold">메뉴보기</a>	&nbsp;
+				</p>
+			</div>
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+							<div class="col-md-4">
+				<div class="mainlink"><br>
+			  	  	<%-- session 검사 --%>
+					<c:if test="${sessionScope.mvo != null }"> <%-- session 검사 --%>
+			  			<c:choose>
+			  				<c:when test="${sessionScope.mvo.auth=='customer' }">
+								<select id="command" class="btn btn-default">
+							        <option value="">${mvo.name}님</option>
+							        <option value="${sessionScope.mvo.auth}">주문내역보기</option>
+							        <option value="getCartList">장바구니</option>
+							        <option value="viewMypage">마이페이지</option>
+							        <option value="chargeForm">결제카드 충전</option>
+							        <option value="logout">로그아웃</option>
+						   		</select> 
+			  				</c:when>
+			  				<c:otherwise>
+			  				<select id="command" class="btn btn-default">
+						    	<option value="">${mvo.name}님</option>
+						        <option value="${sessionScope.mvo.auth}">주문현황보기</option>
+						        <option value="viewMypage">마이페이지</option>
+						        <option value="managementStore">업체관리</option>
+						        <option value="logout">로그아웃</option>
+						   </select>
+				  			</c:otherwise>
+				  		</c:choose>
+					</c:if>
+				</div>
+			</div>
+		</div>
 	</div>
+		 	
 
-</section>
-
+	</section>
+<br><br><br><br>
 
  	<!-- MAIN -->
 	<section class="main">
 		<div class="row">
-		  <div class="col-md-2">
-		  
-		  </div>
-		  <div class="col-md-8 center">
-		  	 <jsp:include page="${requestScope.url}"></jsp:include>
-		  </div>
-		  <div class="col-md-2">
-		  
-		  </div>
+		  	<div class="col-md-2"></div>
+		 	<div class="col-md-8 center">
+		  	 	<jsp:include page="${requestScope.url}"></jsp:include>
+		  	</div>
+		  	<div class="col-md-2"></div>
 		</div>
     </section>
 

@@ -1,14 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <%-- 주문처리상태변경 script -ajax로 --%>
 
-<h3>가맹점주 현재 주문 내역</h3>
+<p style="color: blue;">가맹점주 주문 내역</p>
 <c:choose>
 	<c:when test="${sessionScope.mvo!=null }">
 		<c:set value="${requestScope.lvo}" var="lvo"/>
 		<c:set value="${lvo.pagingBean}" var="pb"/>
-		<table class="table" id = "testTable">
+		<table class="w3-table w3-bordered" class="table" id = "testTable">
 			<thead>
 				<tr>
 					<th>주문번호</th><th>주문자아이디<th>메뉴명</th>
@@ -38,7 +39,7 @@
 		<a href="${pageContext.request.contextPath }/DispatcherServlet?command=ownerAllOrderList&nowPage=1">전체 주문 내역</a>
 		<BR><BR><BR>
 		
-		<ul class="pagination">
+		<ul class="pagination" >
 			<c:if test="${pb.previousPageGroup==true }">
 				<li><a href="DispatcherServlet?command=ownerCurrentOrderList&nowPage=${pb.startPageOfPageGroup-1 }">&laquo;</a></li>
 			</c:if>
@@ -55,6 +56,7 @@
 			<c:if test="${pb.nextPageGroup==true}">
 			    <li><a href="DispatcherServlet?command=ownerCurrentOrderList&nowPage=${pb.endPageOfPageGroup+1}">&raquo;</a></li>
 			</c:if>
+			
 		</ul>
 	</c:when>
 	<c:otherwise>
